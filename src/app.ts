@@ -5,20 +5,18 @@ import router from "./routes/Router.ts";
 
 dotenv.config();
 
-// const app = express();
-
 // connect database
 connectDB();
 
 const app = express();
 
-// ROUTES
-app.use("/api", router);
+app.use(express.json());
 
 const PORT = Number(process.env.PORT || 3000);
 const HOST = process.env.HOST || 'localhost';
 
-app.use(express.json());
+// ROUTES
+app.use("/api", router);
 
 app.listen(PORT, HOST, () => {
     console.log(`Server running on http://${HOST}:${PORT}`);
