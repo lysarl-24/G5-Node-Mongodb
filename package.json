@@ -2,12 +2,13 @@
   "name": "g5-node-mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec \"npx ts-node --esm src/app.ts\"",
     "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lysarl-24/G5-Node-Mongodb.git"
@@ -15,7 +16,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/lysarl-24/G5-Node-Mongodb/issues"
   },
@@ -28,6 +28,8 @@
     "route": "^0.2.5"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
     "ts-node-dev": "^2.0.0"
   }
 }

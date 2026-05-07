@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2022",        // JavaScript version to compile to
+    "module": "ES2022",        // Module system for ES modules
+    "moduleResolution": "node", // Use Node.js module resolution
+    "rootDir": "./src",        // Where TS files are located
+    "outDir": "./dist",        // Where compiled JS files will go
+    "strict": true,            // Enable strict type checking
+    "esModuleInterop": true,   // Allow importing commonjs modules easily
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src/**/*"],     // Include all TS files in src
+  "exclude": ["node_modules"]  // Exclude node_modules folder
+}
